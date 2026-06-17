@@ -20,3 +20,4 @@
 | [using-superpowers](using-superpowers/) | [obra/superpowers](https://github.com/obra/superpowers) |
 | [uv-package-manager](uv-package-manager/) | [wshobson/agents](https://github.com/wshobson/agents) |
 | [webapp-testing](webapp-testing/) | [anthropics/skills](https://github.com/anthropics/skills) |
+| [karpathy-guidelines](karpathy-guidelines/) | [forrestchang/andrej-karpathy-skills](https://github.com/forrestchang/andrej-karpathy-skills) |
