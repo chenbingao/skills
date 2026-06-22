@@ -4,7 +4,7 @@
 
 - [commit-convention](commit-convention/) — 约定式提交规范
 - [rust-convention](rust-convention/) — Rust 代码规范
-- [skill-management](skill-management/) — Skill 创建和管理规范
+- [ts-convention](ts-convention/) — TypeScript/Vue 前端代码规范
 
 ## 安装的
 
