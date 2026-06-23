@@ -5,6 +5,7 @@
 - [commit-convention](commit-convention/) — 约定式提交规范
 - [rust-convention](rust-convention/) — Rust 代码规范
 - [ts-convention](ts-convention/) — TypeScript/Vue 前端代码规范
+- [lua-convention](lua-convention/) — Lua 代码规范（Neovim 配置），stylua 格式化
 
 ## 安装的
 
