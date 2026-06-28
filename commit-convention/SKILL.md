@@ -1,6 +1,6 @@
 ---
+name: commit-convention
 description: 按约定式提交规范编写 git commit message。提交代码或 amend commit 时使用。
-allowed-tools: Bash(git add *) Bash(git commit *) Bash(git status *) Bash(git log *) Bash(git diff *) Read
 ---
 
 ## 执行规则

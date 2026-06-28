@@ -1,6 +1,6 @@
 ---
+name: rust-convention
 description: Rust 代码规范。每次编译前执行 cargo fmt && cargo clippy --all-targets，确保零警告零错误。
-allowed-tools: Bash(cargo *) Bash(rustfmt *) Read
 ---
 
 ## Rust 代码规范

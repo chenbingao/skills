@@ -1,6 +1,6 @@
 ---
+name: ts-convention
 description: TypeScript/Vue 前端代码规范。改完代码后执行 bun run check（prettier → eslint → vue-tsc），确保零警告零错误。
-allowed-tools: Bash(bun *) Bash(bunx *) Read
 ---
 
 ## TypeScript / Vue 前端代码规范

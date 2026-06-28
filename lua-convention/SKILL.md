@@ -1,6 +1,6 @@
 ---
+name: lua-convention
 description: Lua 代码规范（Neovim 配置）。改完代码后执行 stylua 格式化。
-allowed-tools: Bash(stylua *) Bash(find *) Read
 ---
 
 ## Lua 代码规范（Neovim 配置）
