@@ -12,3 +12,4 @@ description: 按约定式提交规范编写 git commit message。提交代码或
 - 禁止 `Co-Authored-By` 尾注
 - **commit 之前先更新相关文档**（API 文档、表结构文档、功能说明等），确保文档与代码同步
 - 规范检查通过后，交由 `/git-commit` 执行实际的 git commit 操作
+- **commit 即止，不执行 git push**，推送由用户自行完成
