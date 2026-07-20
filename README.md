@@ -13,7 +13,7 @@
 |---|---|
 | [brainstorming](brainstorming/) | [obra/superpowers](https://github.com/obra/superpowers) |
 | [code-review-excellence](code-review-excellence/) | [wshobson/agents](https://github.com/wshobson/agents) |
-| [code-simplifier](code-simplifier/) | ~~[anthropics/claude-plugins-official](https://github.com/anthropics/claude-plugins-official)~~ 上游已转为 Claude Code agent 格式，当前为社区编译版 (v0.1.0)，无后续更新 |
+| [code-simplifier](code-simplifier/) | [pproenca/dot-skills](https://github.com/pproenca/dot-skills)（社区版，skills CLI 管理） |
 | [find-skills](find-skills/) | [vercel-labs/skills](https://github.com/vercel-labs/skills) |
 | [git-commit](git-commit/) | [codethread/agents](https://github.com/codethread/agents) |
 | [pi-planning-with-files](pi-planning-with-files/) | [othmanadi/planning-with-files](https://github.com/othmanadi/planning-with-files) |
