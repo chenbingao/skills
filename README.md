@@ -1,5 +1,12 @@
 # Agent Skills
 
+## 新机器初始化
+
+```bash
+git clone git@github.com:chenbingao/skills.git ~/.agents/skills
+ln -sf ~/.agents/skills/.skill-lock.json ~/.agents/.skill-lock.json
+```
+
 ## 自己写的
 
 - [commit-convention](commit-convention/) — 约定式提交规范

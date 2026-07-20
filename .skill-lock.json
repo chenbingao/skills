@@ -1,0 +1,108 @@
+{
+  "version": 3,
+  "skills": {
+    "find-skills": {
+      "source": "vercel-labs/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/skills.git",
+      "skillPath": "skills/find-skills/SKILL.md",
+      "skillFolderHash": "76a98a285cb0434f3d39e1a873823556330e398b",
+      "installedAt": "2026-05-07T10:38:32.554Z",
+      "updatedAt": "2026-07-20T09:14:37.507Z"
+    },
+    "git-commit": {
+      "source": "codethread/agents",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/codethread/agents.git",
+      "skillPath": "plugins/coding/skills/git-commit/SKILL.md",
+      "skillFolderHash": "8c3716ba130e312156c320af6ce3519c86a9b861",
+      "installedAt": "2026-05-07T10:41:03.839Z",
+      "updatedAt": "2026-07-20T09:14:36.714Z"
+    },
+    "brainstorming": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/obra/superpowers.git",
+      "skillPath": "skills/brainstorming/SKILL.md",
+      "skillFolderHash": "b14f49a55a8387cfa12ac89794ab79698d7fddbb",
+      "installedAt": "2026-05-15T10:14:36.443Z",
+      "updatedAt": "2026-07-20T09:14:35.019Z"
+    },
+    "using-superpowers": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/obra/superpowers.git",
+      "skillPath": "skills/using-superpowers/SKILL.md",
+      "skillFolderHash": "8528440d6778e041cb1b9a0ada13f9f3cecda663",
+      "installedAt": "2026-05-21T01:37:44.829Z",
+      "updatedAt": "2026-07-20T09:14:34.945Z"
+    },
+    "pptx": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/anthropics/skills.git",
+      "skillPath": "skills/pptx/SKILL.md",
+      "skillFolderHash": "82eaf5daede5a1779aa17ccf06597cb209a0c2bd41d3a2f18bd45e0301a387fb",
+      "pluginName": "document-skills",
+      "installedAt": "2026-05-21T01:37:53.058Z",
+      "updatedAt": "2026-07-20T09:14:38.255Z"
+    },
+    "uv-package-manager": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/wshobson/agents.git",
+      "skillPath": "plugins/python-development/skills/uv-package-manager/SKILL.md",
+      "skillFolderHash": "c2bf8833d6c3ffa283171ef3b8da90274451605e170077f1ee6529cc38aa6438",
+      "installedAt": "2026-05-21T01:37:59.870Z",
+      "updatedAt": "2026-07-20T09:14:39.758Z"
+    },
+    "code-review-excellence": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/wshobson/agents.git",
+      "skillPath": "plugins/developer-essentials/skills/code-review-excellence/SKILL.md",
+      "skillFolderHash": "0f585a4ad2f6d8353069ca9051c6f0e8865abb9d3a6a268d423784c3c3852962",
+      "installedAt": "2026-05-21T01:38:11.330Z",
+      "updatedAt": "2026-07-20T09:14:38.689Z"
+    },
+    "webapp-testing": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/anthropics/skills.git",
+      "skillPath": "skills/webapp-testing/SKILL.md",
+      "skillFolderHash": "ad5b1fc52807e9afa4635e59218a026b164dc58b6c3f41b0f7c644dcd6ccf572",
+      "pluginName": "example-skills",
+      "installedAt": "2026-05-21T01:38:19.263Z",
+      "updatedAt": "2026-07-20T09:14:39.527Z"
+    },
+    "code-simplifier": {
+      "source": "pproenca/dot-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/pproenca/dot-skills.git",
+      "skillPath": "skills/.curated/code-simplifier/SKILL.md",
+      "skillFolderHash": "3cfb1fcf0d73f2e6fa95d33f0dd012274f2cae6b",
+      "installedAt": "2026-05-21T01:38:54.241Z",
+      "updatedAt": "2026-07-20T09:11:53.552Z"
+    },
+    "karpathy-guidelines": {
+      "source": "forrestchang/andrej-karpathy-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/forrestchang/andrej-karpathy-skills.git",
+      "skillPath": "skills/karpathy-guidelines/SKILL.md",
+      "skillFolderHash": "41e8ca055bbde13d240776a14a076a59614057200340c243130a76ba4e64cac8",
+      "pluginName": "andrej-karpathy-skills",
+      "installedAt": "2026-07-20T09:14:37.474Z",
+      "updatedAt": "2026-07-20T09:14:37.474Z"
+    },
+    "planning-with-files": {
+      "source": "othmanadi/planning-with-files",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/othmanadi/planning-with-files.git",
+      "skillPath": "skills/planning-with-files/SKILL.md",
+      "skillFolderHash": "5732e7f1dc5cbcd22173749352dcb43335ba83fbb399b8397d57c427b212cb73",
+      "installedAt": "2026-07-20T09:14:43.441Z",
+      "updatedAt": "2026-07-20T09:14:43.441Z"
+    }
+  },
+  "dismissed": {}
+}
