@@ -102,6 +102,42 @@
       "skillFolderHash": "5732e7f1dc5cbcd22173749352dcb43335ba83fbb399b8397d57c427b212cb73",
       "installedAt": "2026-07-20T09:14:43.441Z",
       "updatedAt": "2026-07-20T09:14:43.441Z"
+    },
+    "rust-convention": {
+      "source": "",
+      "sourceType": "local",
+      "sourceUrl": "",
+      "skillPath": "rust-convention/SKILL.md",
+      "skillFolderHash": "78aef4a795dade6f58310acd10c104dcbb9ff222",
+      "installedAt": "2026-07-22T00:00:00.000Z",
+      "updatedAt": "2026-07-22T00:00:00.000Z"
+    },
+    "lua-convention": {
+      "source": "",
+      "sourceType": "local",
+      "sourceUrl": "",
+      "skillPath": "lua-convention/SKILL.md",
+      "skillFolderHash": "2e2dbd52d1201d15202cd58cef6f42e59ad9739b",
+      "installedAt": "2026-07-22T00:00:00.000Z",
+      "updatedAt": "2026-07-22T00:00:00.000Z"
+    },
+    "ts-convention": {
+      "source": "",
+      "sourceType": "local",
+      "sourceUrl": "",
+      "skillPath": "ts-convention/SKILL.md",
+      "skillFolderHash": "375ed12b25c2e11944a96f7daf2e6376395af1f3",
+      "installedAt": "2026-07-22T00:00:00.000Z",
+      "updatedAt": "2026-07-22T00:00:00.000Z"
+    },
+    "commit-convention": {
+      "source": "",
+      "sourceType": "local",
+      "sourceUrl": "",
+      "skillPath": "commit-convention/SKILL.md",
+      "skillFolderHash": "bd9475812a4a2ce284bc782d782be517ce234b95",
+      "installedAt": "2026-07-22T00:00:00.000Z",
+      "updatedAt": "2026-07-22T00:00:00.000Z"
     }
   },
   "dismissed": {}
