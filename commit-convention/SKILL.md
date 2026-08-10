@@ -7,6 +7,7 @@ description: 按约定式提交规范编写 git commit message。提交代码或
 
 - 先草拟 commit message 给我确认，确认后再执行 git commit
 - 标题使用 `type(scope): 中文摘要`，末尾不加句号
+- 标题与正文之间必须保留一个空行，正文缺失时可不加
 - 正文使用短横线条目，聚焦行为变化，条目之间不留空行
 - scope 落到具体模块、服务或专题域，不要重复仓库名（如仓库叫 hub 时 `feat(hub)` 是错的，`feat:` 即可）
 - 禁止 `Co-Authored-By` 尾注
