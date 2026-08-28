@@ -24,18 +24,18 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/obra/superpowers.git",
       "skillPath": "skills/brainstorming/SKILL.md",
-      "skillFolderHash": "b14f49a55a8387cfa12ac89794ab79698d7fddbb",
+      "skillFolderHash": "b58d55b64742ecd37923985ec7bdfbe678ffbcb9895562abd28c0a32dcacd7fb",
       "installedAt": "2026-05-15T10:14:36.443Z",
-      "updatedAt": "2026-07-20T09:14:35.019Z"
+      "updatedAt": "2026-08-28T01:47:25.041Z"
     },
     "using-superpowers": {
       "source": "obra/superpowers",
       "sourceType": "github",
       "sourceUrl": "https://github.com/obra/superpowers.git",
       "skillPath": "skills/using-superpowers/SKILL.md",
-      "skillFolderHash": "8528440d6778e041cb1b9a0ada13f9f3cecda663",
+      "skillFolderHash": "c7abe8bdc2099bbe4f245454d32c7563ccd2bb41dcc218b02b461c2acc3c6ae6",
       "installedAt": "2026-05-21T01:37:44.829Z",
-      "updatedAt": "2026-07-20T09:14:34.945Z"
+      "updatedAt": "2026-08-28T01:47:29.409Z"
     },
     "pptx": {
       "source": "anthropics/skills",
@@ -99,9 +99,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/othmanadi/planning-with-files.git",
       "skillPath": "skills/planning-with-files/SKILL.md",
-      "skillFolderHash": "5732e7f1dc5cbcd22173749352dcb43335ba83fbb399b8397d57c427b212cb73",
+      "skillFolderHash": "5fb355a4614c99b2dedf69c54d221f15a27bd8f775b98fcaaa9d5549cf5f13ce",
       "installedAt": "2026-07-20T09:14:43.441Z",
-      "updatedAt": "2026-07-20T09:14:43.441Z"
+      "updatedAt": "2026-08-28T01:48:51.279Z"
     },
     "rust-convention": {
       "source": "",
