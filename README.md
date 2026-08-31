@@ -5,7 +5,10 @@
 ```bash
 git clone git@github.com:chenbingao/skills.git ~/.agents/skills
 ln -sf ~/.agents/skills/.skill-lock.json ~/.agents/.skill-lock.json
+dsh plugin --profile desktop add github:LayneChai/superpowers-dsh
 ```
+
+> 未全局安装 `dsh` 时，最后一条改用 `npx @deepseek-ai/dsh plugin --profile desktop add github:LayneChai/superpowers-dsh`。装完重启 DSH Desktop 生效。
 
 ## 自己写的
 
