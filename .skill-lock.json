@@ -19,24 +19,6 @@
       "installedAt": "2026-05-07T10:41:03.839Z",
       "updatedAt": "2026-07-20T09:14:36.714Z"
     },
-    "brainstorming": {
-      "source": "obra/superpowers",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/obra/superpowers.git",
-      "skillPath": "skills/brainstorming/SKILL.md",
-      "skillFolderHash": "b58d55b64742ecd37923985ec7bdfbe678ffbcb9895562abd28c0a32dcacd7fb",
-      "installedAt": "2026-05-15T10:14:36.443Z",
-      "updatedAt": "2026-08-28T01:47:25.041Z"
-    },
-    "using-superpowers": {
-      "source": "obra/superpowers",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/obra/superpowers.git",
-      "skillPath": "skills/using-superpowers/SKILL.md",
-      "skillFolderHash": "c7abe8bdc2099bbe4f245454d32c7563ccd2bb41dcc218b02b461c2acc3c6ae6",
-      "installedAt": "2026-05-21T01:37:44.829Z",
-      "updatedAt": "2026-08-28T01:47:29.409Z"
-    },
     "pptx": {
       "source": "anthropics/skills",
       "sourceType": "github",
