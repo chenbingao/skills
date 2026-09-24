@@ -16,6 +16,7 @@ dsh plugin --profile desktop add github:LayneChai/superpowers-dsh
 - [rust-convention](rust-convention/) — Rust 代码规范
 - [ts-convention](ts-convention/) — TypeScript/Vue 前端代码规范
 - [lua-convention](lua-convention/) — Lua 代码规范（Neovim 配置），stylua 格式化
+- [storing-superpowers-artifacts](storing-superpowers-artifacts/) — Superpowers 产物（spec/plan）统一存 `.superpowers/`，覆盖第三方技能里的 `docs/superpowers/` 路径指令
 
 ## 安装的（skills CLI 管理，`npx skills check` / `npx skills update`）
 
@@ -30,6 +31,12 @@ dsh plugin --profile desktop add github:LayneChai/superpowers-dsh
 | [uv-package-manager](uv-package-manager/) | [wshobson/agents](https://github.com/wshobson/agents) |
 | [webapp-testing](webapp-testing/) | [anthropics/skills](https://github.com/anthropics/skills) |
 | [karpathy-guidelines](karpathy-guidelines/) | [forrestchang/andrej-karpathy-skills](https://github.com/forrestchang/andrej-karpathy-skills) |
+
+> `planning-with-files` 上游仓库含多个本地化副本（`-ar/-de/-es/-zh/-zht`），`npx skills update` 无法判定目标会一直跳过它，需显式更新：
+>
+> ```bash
+> npx skills add othmanadi/planning-with-files -g -s planning-with-files -y
+> ```
 
 ## DSH 插件提供的（不再走 skills CLI）
 
