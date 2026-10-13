@@ -117,9 +117,9 @@
       "sourceType": "local",
       "sourceUrl": "",
       "skillPath": "commit-convention/SKILL.md",
-      "skillFolderHash": "bd9475812a4a2ce284bc782d782be517ce234b95",
+      "skillFolderHash": "553201f9d956444d12c00fe6482d56d86118b477",
       "installedAt": "2026-07-22T00:00:00.000Z",
-      "updatedAt": "2026-07-22T00:00:00.000Z"
+      "updatedAt": "2026-10-13T00:00:00.000Z"
     },
     "docker-local-dev-stack": {
       "source": "",
@@ -127,6 +127,15 @@
       "sourceUrl": "",
       "skillPath": "docker-local-dev-stack/SKILL.md",
       "skillFolderHash": "1937213e220f1b4dc84f71974de1279d2f334163",
+      "installedAt": "2026-10-13T00:00:00.000Z",
+      "updatedAt": "2026-10-13T00:00:00.000Z"
+    },
+    "storing-superpowers-artifacts": {
+      "source": "",
+      "sourceType": "local",
+      "sourceUrl": "",
+      "skillPath": "storing-superpowers-artifacts/SKILL.md",
+      "skillFolderHash": "2daac946aa40e146927ad3c499ffe76d1efe2e18",
       "installedAt": "2026-10-13T00:00:00.000Z",
       "updatedAt": "2026-10-13T00:00:00.000Z"
     }
