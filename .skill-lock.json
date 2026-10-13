@@ -120,6 +120,15 @@
       "skillFolderHash": "bd9475812a4a2ce284bc782d782be517ce234b95",
       "installedAt": "2026-07-22T00:00:00.000Z",
       "updatedAt": "2026-07-22T00:00:00.000Z"
+    },
+    "docker-local-dev-stack": {
+      "source": "",
+      "sourceType": "local",
+      "sourceUrl": "",
+      "skillPath": "docker-local-dev-stack/SKILL.md",
+      "skillFolderHash": "1937213e220f1b4dc84f71974de1279d2f334163",
+      "installedAt": "2026-10-13T00:00:00.000Z",
+      "updatedAt": "2026-10-13T00:00:00.000Z"
     }
   },
   "dismissed": {}
