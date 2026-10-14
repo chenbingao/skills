@@ -18,6 +18,7 @@ dsh plugin --profile desktop add github:LayneChai/superpowers-dsh
 - [lua-convention](lua-convention/) — Lua 代码规范（Neovim 配置），stylua 格式化
 - [storing-superpowers-artifacts](storing-superpowers-artifacts/) — Superpowers 产物（spec/plan）统一存 `.superpowers/`，覆盖第三方技能里的 `docs/superpowers/` 路径指令
 - [docker-local-dev-stack](docker-local-dev-stack/) — 本地 Docker 开发环境：单容器内 nginx + N 个应用副本，日志汇总到控制台
+- [docs-current-state](docs-current-state/) — 文档只描述当前状态（不写历史），spec 面向业务读者（不堆术语与代码）
 
 ## 安装的（skills CLI 管理，`npx skills check` / `npx skills update`）
 

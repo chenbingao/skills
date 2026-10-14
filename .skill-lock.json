@@ -138,6 +138,15 @@
       "skillFolderHash": "2daac946aa40e146927ad3c499ffe76d1efe2e18",
       "installedAt": "2026-10-13T00:00:00.000Z",
       "updatedAt": "2026-10-13T00:00:00.000Z"
+    },
+    "docs-current-state": {
+      "source": "",
+      "sourceType": "local",
+      "sourceUrl": "",
+      "skillPath": "docs-current-state/SKILL.md",
+      "skillFolderHash": "5277a093aaf4c5e25bc115ddabba9225e119d8de",
+      "installedAt": "2026-10-14T00:00:00.000Z",
+      "updatedAt": "2026-10-14T00:00:00.000Z"
     }
   },
   "dismissed": {}
