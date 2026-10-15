@@ -117,9 +117,9 @@
       "sourceType": "local",
       "sourceUrl": "",
       "skillPath": "commit-convention/SKILL.md",
-      "skillFolderHash": "553201f9d956444d12c00fe6482d56d86118b477",
+      "skillFolderHash": "df272a9f249c61fc38df21f65b98971667fa9d44",
       "installedAt": "2026-07-22T00:00:00.000Z",
-      "updatedAt": "2026-10-13T00:00:00.000Z"
+      "updatedAt": "2026-10-14T00:00:00.000Z"
     },
     "docker-local-dev-stack": {
       "source": "",
