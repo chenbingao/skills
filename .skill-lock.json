@@ -147,6 +147,15 @@
       "skillFolderHash": "3da51a53f441ea0bd2b609e89e0a823e3d8b3098",
       "installedAt": "2026-10-14T00:00:00.000Z",
       "updatedAt": "2026-10-14T00:00:00.000Z"
+    },
+    "harness-conventions": {
+      "source": "",
+      "sourceType": "local",
+      "sourceUrl": "",
+      "skillPath": "harness-conventions/SKILL.md",
+      "skillFolderHash": "a658a4b1e970e07ea6a85b30180a9cbe2785e64f",
+      "installedAt": "2026-10-16T00:00:00.000Z",
+      "updatedAt": "2026-10-16T00:00:00.000Z"
     }
   },
   "dismissed": {}
