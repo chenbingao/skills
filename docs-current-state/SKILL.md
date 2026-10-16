@@ -35,7 +35,7 @@ description: "Use when writing or updating any project document, spec, README, d
 |---|---|
 | 规则成立的理由 | 「这里用 COALESCE 表达式唯一索引：该列可空，而 PG 中 NULL 互不相等，普通唯一约束会失效」——描述的是**当前为什么这样**，不是"曾经怎样" |
 | 不变量与代价 | 「漏生成主键会被 NOT NULL 拦下，不会静默写错数据」 |
-| 需求原文与编号引用 | `FR-AUTH-02`、`API-CLOCK-01`、`DEC-007` 等可追溯编号 |
+| 需求原文与编号引用 | 项目自有的可追溯编号（功能点、接口、决策、配置项等） |
 | 文件头元信息 | 状态、上游、下游、**更新日期**（日期是元数据，不是历史叙述） |
 | 待确认项 | 尚未定论的问题清单（它们描述"当前未决"，不是历史） |
 
@@ -69,23 +69,18 @@ description: "Use when writing or updating any project document, spec, README, d
 | 我们标的【推断】与正文或截图冲突 | 以正文/截图为准，修正或删除该推断 |
 | 正文自身前后矛盾 | **不许自行选一个** → 列入「待确认」并标出两处出处 |
 
-**改写的落点**（技术内容不是被删掉，而是归位）：
+**改写的落点**（技术内容不是被删掉，而是归位）：建表与索引 → 迁移（代码）；请求/响应字段与错误码 → 代码生成的接口规范；架构、部署、开发流程 → `harness/tech/`；AI 过程产物 → `harness/.ai/`。
 
-| 技术内容 | 去处 |
-|---|---|
-| 建表语句、字段类型、索引 | 代码（迁移文件）——**唯一真相** |
-| 请求/响应字段、错误码 | 由代码生成的接口规范（Swagger / OpenAPI） |
-| 架构与编码约定、部署与迁移、开发流程 | `harness/tech/` |
-| AI 过程产物（计划、报告、进度） | `harness/.ai/`（不进版本库） |
+**权威清单见 skill `harness-conventions` 的「单一真相」表**——此处只指方向，不重复那张表，避免两处各自漂移。
 
 **改写示例**：
 
 | ❌ 堆术语/代码 | ✅ 业务口径 |
 |---|---|
-| `business_date date NOT NULL`，按 Asia/Shanghai 切分 | 打卡归到哪一天，按公司所在时区（东八区）划分 |
-| `clock_method clock_method[] NOT NULL` — 打卡方式集合，任一满足即可 | 一个考勤组可以同时允许多种打卡方式，员工满足任意一种即算有效打卡 |
-| `CREATE UNIQUE INDEX ... ON attendance_group_members (...)` | 同一个考勤组里，同一个部门或同一个员工只能出现一次 |
-| `sessions:{employee_id}:{client_type}`（ZSET，member=sha256(token)） | 每个员工每种客户端同时只保留一个登录会话 |
+| `xxx_date date NOT NULL`，按固定时区切分 | 这条记录归属哪一天，按公司所在时区划分 |
+| `xxx_method xxx_method[] NOT NULL` — 枚举数组，任一满足即可 | 一项业务可以同时允许多种方式，满足任意一种即算有效 |
+| `CREATE UNIQUE INDEX ... ON some_table (...)` | 同一个分组里，同一个成员只能出现一次 |
+| `some_key:{owner_id}:{client_type}`（有序集合，member 为凭证摘要） | 每个用户每种客户端同时只保留一个会话 |
 
 ## 判定方法（三问）
 

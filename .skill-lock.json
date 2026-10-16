@@ -144,16 +144,16 @@
       "sourceType": "local",
       "sourceUrl": "",
       "skillPath": "docs-current-state/SKILL.md",
-      "skillFolderHash": "3da51a53f441ea0bd2b609e89e0a823e3d8b3098",
+      "skillFolderHash": "407c7356134f35db260eb560ea7485dcec69f705",
       "installedAt": "2026-10-14T00:00:00.000Z",
-      "updatedAt": "2026-10-14T00:00:00.000Z"
+      "updatedAt": "2026-10-16T00:00:00.000Z"
     },
     "harness-conventions": {
       "source": "",
       "sourceType": "local",
       "sourceUrl": "",
       "skillPath": "harness-conventions/SKILL.md",
-      "skillFolderHash": "a658a4b1e970e07ea6a85b30180a9cbe2785e64f",
+      "skillFolderHash": "3f1b926c5cf9494cd14c578b82985175b919a01b",
       "installedAt": "2026-10-16T00:00:00.000Z",
       "updatedAt": "2026-10-16T00:00:00.000Z"
     }
