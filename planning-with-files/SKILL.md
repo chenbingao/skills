@@ -28,7 +28,7 @@ hooks:
         - type: command
           command: "[ -n \"${CLAUDE_PLUGIN_ROOT:-}\" ] && exit 0; SH=\"${CLAUDE_SKILL_DIR}/scripts/skill-hook.sh\"; [ -f \"$SH\" ] || SH=$(ls \"$HOME/.claude/skills/planning-with-files/scripts/skill-hook.sh\" \"$HOME/.claude/plugins/marketplaces/planning-with-files/scripts/skill-hook.sh\" 2>/dev/null | head -1); [ -n \"$SH\" ] && [ -f \"$SH\" ] && sh \"$SH\" --event=precompact; exit 0"
 metadata:
-  version: "3.23.0"
+  version: "3.28.0"
 ---
 
 # Planning with Files
@@ -79,12 +79,28 @@ Metadata mode may report that same-project session activity exists, but it emits
 
 Before a complex task:
 
-1. **Resolve or initialize the task directory.** Reuse the selected plan when resuming. For a separate task, run `scripts/init-session.sh "Task Name"` and use the printed `PLAN_ID` to pin its host.
-2. **Create missing planning files only.** Use [templates/task_plan.md](templates/task_plan.md), [templates/findings.md](templates/findings.md), and [templates/progress.md](templates/progress.md) in that directory. Preserve existing work.
+1. **Restore before creating.** Reuse the selected plan when resuming. For a new task, run the installed initializer before implementation; follow the creation contract below and pin the host with its printed `PLAN_ID` when using a named plan.
+2. **Preserve the initialized structure.** Fill in the selected plan and notes without replacing the native phase/status markers. Existing planning files must not be overwritten.
 3. **Re-read the selected plan before decisions.** Update progress after each phase.
 4. **Assign one plan owner.** The orchestrator owns `task_plan.md` and shared summaries. Workers report through their own ledgers or assigned files; they do not independently rewrite the shared planning files.
 
 > Planning files belong to the selected task directory in the project. The installation directory contains the scripts and templates.
+
+## New plan creation contract
+
+For a new task, use the installed initializer before implementation. Set `PWF_SKILL_DIR` to the directory containing the SKILL.md you just read, then run from the project root:
+
+```sh
+sh "$PWF_SKILL_DIR/scripts/init-session.sh"
+# After filling in the selected plan, validate its explicit path:
+sh "$PWF_SKILL_DIR/scripts/check-complete.sh" --validate path/to/task_plan.md
+```
+
+PowerShell equivalents are `init-session.ps1` and `check-complete.ps1 -Validate -PlanFile path/to/task_plan.md`. A named task may use the initializer's name argument and printed `PLAN_ID`.
+
+Keep each phase as `### Phase N: Name` with exactly one `**Status:** pending`, `**Status:** in_progress`, or `**Status:** complete` line. A `## Phases` checklist or numbered summary alone is not trackable. Preserve these markers when tailoring the generated plan; do not replace the skeleton with a compact custom format. Validation must succeed before substantive work and after changing phase structure. This checks format, not task completion or attestation.
+
+Reuse existing plans without overwriting them. If an existing plan fails validation, report the issue for its owner to review; do not automatically rewrite it. If helpers cannot run, copy the shipped template exactly and state that native validation is unavailable.
 
 ## The Core Pattern
 
@@ -232,9 +248,13 @@ Helper scripts for automation:
 
 ### List saved plans
 
+For agent-readable paths and state, add `--json` (PowerShell: `-Json`) to the listing command. This optional read-only mode includes root files, selection uncertainty and bounded paging. See [the inventory schema and worker handoff](plan-inventory.md). It never runs during ordinary activation.
+
 To find a task before resuming it, run `sh "<skill-dir>/scripts/set-active-plan.sh" --list` or, in Windows PowerShell, `& "<skill-dir>/scripts/set-active-plan.ps1" -List`. Replace `<skill-dir>` with this installed skill directory and keep your current directory at the project root.
 
 This read-only command lists named plans and phase progress under the current directory's `.planning/`. `[active]` marks the shared default pointer; it does not bind a session. Concurrent tasks still require each host's `PLAN_ID` or separate worktrees.
+
+When hooks report that multiple plans are available, or every phase of a named plan is complete, run the listing command and tell the user which plans look finished. Archive only the plans the user approves: `--archive <id>` (PowerShell: `-Archive <id>`) previews the move to `.planning/.archive/`, `--yes` (`-Yes`) applies it, and `--restore <id>` (`-Restore <id>`) moves it back. Never archive on age or completion alone.
 
 ### Parallel task workflow
 
@@ -364,25 +384,31 @@ After install, bare `/loop <interval>` runs the planning-aware tick.
 
 ## Autonomous and Gated Modes (v3)
 
-v3 adds two opt-in modes for long-running agentic work with strong models (Opus 4.8, Fable 5, GPT 5.5 class). Both key off an explicit marker file in the plan directory. With no marker present, behavior is exactly v2.43: nothing in this section changes the legacy path.
+v3 adds two opt-in modes for long-running agentic work with strong models (Opus 4.8, Fable 5, GPT 5.5 class). Both key off an explicit marker file in the plan directory. Without a mode marker, the legacy content format remains active. Since v3.24.0, Claude Code suppresses repeated unchanged PreToolUse views when session identity and private cache storage are available.
 
 The mode is set by writing a `.mode` file next to the plan (`.planning/<id>/.mode`, or `./.mode` in legacy root mode). `init-session` writes it for you when you pass `--autonomous` or `--gated`.
 
 ### The legacy invariant (promise)
 
-With no `.mode` file and no other v3 marker, plan injection preserves the v2.43 output, including the raw `progress.md` tail and the `===BEGIN PLAN DATA===` / `===END PLAN DATA===` delimiters. Autonomous and gated behavior remains opt-in. Since v3.18.3, completed plans are silent through the shared Stop gate and Codex Stop hook. Explicit `check-complete.sh` or `check-complete.ps1` calls without the gate flag still report completion; incomplete-plan notices and gate decisions are unchanged.
+With no `.mode` file and no other v3 marker, plan injection preserves the v2.43 content format, including the raw `progress.md` tail and the `===BEGIN PLAN DATA===` / `===END PLAN DATA===` delimiters. Autonomous and gated behavior remains opt-in. Since v3.18.3, completed plans are silent through the shared Stop gate and Codex Stop hook. Explicit `check-complete.sh` or `check-complete.ps1` calls without the gate flag still report completion; incomplete-plan notices and gate decisions are unchanged.
+
+### Unchanged-view suppression (v3.24.0)
+
+Claude Code's plugin and standalone skill hooks remember the last successfully emitted PreToolUse view for each session and agent. UserPromptSubmit seeds that view from the same validated plan snapshot, so unchanged tool calls add no repeated plan context. A change inside the selected head or smart view, a plan switch, or a rendering-mode change refreshes it once. Edits outside a plain 30-line head do not change that view; the full plan remains on disk.
+
+Recovery and compaction events reset this state. Missing session identity, an unavailable interpreter, or an unsafe or unavailable private cache keeps repeated injection. Set `PWF_PRETOOL=always` in the host environment before starting Claude Code to request a view on every matched tool call. Path selection and attestation checks still run before suppression; this option does not bypass them. Autonomous and gated modes keep their existing PreToolUse behavior.
 
 ### What each mode does
 
 | | Legacy (default) | Autonomous | Gated |
 |---|---|---|---|
 | Turn-start injection (UserPromptSubmit) | Full plan head + raw progress tail | Full plan head + structured ledger summary | Full plan head + structured ledger summary |
-| Per-tool-call injection (PreToolUse) | Plan head every call | Dropped (recitation policy) | Dropped (recitation policy) |
+| Per-tool-call injection (PreToolUse) | Claude Code: refreshes each changed view; repeats without a usable cache | Dropped (recitation policy) | Dropped (recitation policy) |
 | Stop event | Advisory only, never blocks | Advisory only, never blocks | Completion gate may block (host-aware) |
 | Attestation | Opt-in | Default-on at init | Default-on at init |
 | Progress injection | Raw `tail -20 progress.md` | `ledger-summary.sh` synthesized block | `ledger-summary.sh` synthesized block |
 
-Autonomous mode answers the recitation question: strong models drift less, so the per-tool-call plan re-injection (about 90 tokens per matched tool call, the component that scales with tool use) is dropped. Turn-start injection stays because the evidence (arxiv 2603.03258, claudefa.st on Opus 4.7+ subagents) shows drift is real and the full plan file still matters once per turn. Eliminating recitation entirely is not supported by evidence.
+Autonomous mode omits PreToolUse plan context, including changes to the view during a turn. Turn-start injection remains in every mode so the agent can recover the selected plan from disk.
 
 Gated mode adds the completion gate on top of autonomous behavior. The gate is the termination oracle: it judges the plan artifact on disk, not the conversation transcript, which is why it beats a transcript-bound evaluator that can be hallucinated.
 

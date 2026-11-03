@@ -15,9 +15,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/codethread/agents.git",
       "skillPath": "plugins/coding/skills/git-commit/SKILL.md",
-      "skillFolderHash": "ecce57b8efb5105ba895bc7ac22d5c777d20985e7186b676e5661fea65bace63",
+      "skillFolderHash": "1672f34e333aef02a631ac52edb1967967f80d3eff61e63f462cd5a3b81d380f",
       "installedAt": "2026-05-07T10:41:03.839Z",
-      "updatedAt": "2026-09-24T01:47:59.082Z"
+      "updatedAt": "2026-11-03T04:42:03.478Z"
     },
     "pptx": {
       "source": "anthropics/skills",
@@ -43,9 +43,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/wshobson/agents.git",
       "skillPath": "plugins/developer-essentials/skills/code-review-excellence/SKILL.md",
-      "skillFolderHash": "0f585a4ad2f6d8353069ca9051c6f0e8865abb9d3a6a268d423784c3c3852962",
+      "skillFolderHash": "35f32edb3935e4fd90c13e75954de46d281fd3b5c1a4733c9abbd9eb94f73206",
       "installedAt": "2026-05-21T01:38:11.330Z",
-      "updatedAt": "2026-07-20T09:14:38.689Z"
+      "updatedAt": "2026-11-03T04:42:03.593Z"
     },
     "webapp-testing": {
       "source": "anthropics/skills",
@@ -81,9 +81,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/othmanadi/planning-with-files.git",
       "skillPath": "skills/planning-with-files/SKILL.md",
-      "skillFolderHash": "be3e102021625e2c02a4c01156b05b2595e9d17a0d65a81a460e94fc8310efd1",
+      "skillFolderHash": "eab0f3f0faf6e12a0e2c5e6a95a3d2125c52cc73851a0faa3dbfda41c94209a7",
       "installedAt": "2026-07-20T09:14:43.441Z",
-      "updatedAt": "2026-10-08T01:12:03.140Z"
+      "updatedAt": "2026-11-03T04:42:03.792Z"
     },
     "rust-convention": {
       "source": "",
